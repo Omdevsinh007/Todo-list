@@ -99,12 +99,12 @@ function loadingDisplay() {
     loader.style.display = 'block';
     setTimeout(() => {
         displayTask(uName);
-    }, 2000);
+    }, 500);
 }
 //Shows loader when loaded the page
 function load() {
     body.style.display = 'none';
-    setTimeout(loadingDisplay, 1000);
+    setTimeout(loadingDisplay, 500);
 }
 load();
 //To remove the tasks or delete the tasks

@@ -110,13 +110,13 @@ function loadingDisplay(): void {
   loader.style.display = 'block';
   setTimeout(()=>{
     displayTask(uName);
-  },2000)
+  },500)
 }
 
 //Shows loader when loaded the page
 function load(): void {
   body.style.display = 'none';
-  setTimeout(loadingDisplay,1000)
+  setTimeout(loadingDisplay,500)
 }
 load()
 
