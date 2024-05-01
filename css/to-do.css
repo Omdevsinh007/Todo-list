@@ -5,7 +5,7 @@
   --shadow: black;
   --header-cl:#31313d;
   --header-btn: white;
-
+  --msg-cl: black;
 }
 
 html {
@@ -30,6 +30,10 @@ h1 {
     color: var(--header-btn);
 }
 
+.msg {
+  color: var(--msg-cl);
+}
+
 .dark_theme {
   --body-bg: #31313d;
   --color: white;
@@ -37,6 +41,7 @@ h1 {
   --shadow: rgba(255, 255, 255, 0.8);
   --header-cl: white;
   --header-btn: #31313d;
+  --msg-cl: white;
 }
 
 * {
