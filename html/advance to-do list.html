@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/to-do.css" />
+  <title>To-Do List</title>
+</head>
+<body>
+  <section id="loaderMain"></section>
+  <section id="scroll">
+    <div id="body">
+      <header>
+        <nav>
+          <div>
+            <h1>Advance To-Do list</h1>
+          </div>
+          <div style="display: flex">
+            <button id="themeButton" class="navBtn" style="margin-right: 5px" title="Change the theme of the website">
+              Light
+            </button>
+            <hr />
+            <button id="logoutUser" class="navBtn" style="margin-left: 5px" title="Logout">
+              Logout
+            </button>
+          </div>
+        </nav>
+      </header>
+      <div id="particles-js"></div>
+      <section id="formSection">
+        <div id="div">
+          <h2 id="userName">Welcome!</h2>
+        </div>
+        <div id="formDiv">
+          <form id="addDataForm">
+            <label for="task"><b>Task Name:</b></label><br />
+            <input type="text" id="addTask" name="task" /><br />
+            <label for="taskDetails"><b>About Task:</b></label><br />
+            <textarea id="addTaskDetail" name="taskDetails"></textarea><br />
+            <input type="button" id="addData" class="inputBtn" value="Add Task" />
+          </form>
+          <form id="updateDataForm">
+            <label for="task"><b>Task Name:</b></label><br />
+            <input type="text" id="updateTask" name="task" /><br />
+            <label for="taskDetails"><b>About Task:</b></label><br />
+            <textarea id="updateTaskDetail" name="taskDetails"></textarea><br />
+            <input type="button" id="updateData" class="inputBtn" value="Update Task" />
+          </form>
+        </div>
+      </section>
+      <hr />
+      <section id="searchBar">
+        <div>
+          <input type="search" id="search" placeholder="Search tasks here..." />
+        </div>
+      </section>
+      <div id="loader"></div>
+      <div id="main"></div>
+    </div>
+  </section>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="../dist/particle.js"></script>
+  <script src="../dist/to-do.js"></script>
+</body>
+
+</html>

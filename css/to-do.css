@@ -1,0 +1,355 @@
+:root {
+  --body-bg: white;
+  --color: black;
+  --loader: orchid;
+  --shadow: black;
+  --header-cl:#31313d;
+  --header-btn: white;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+button,
+h2,
+.inputBtn,
+label,
+h3,
+h1 {
+  color: var(--color);
+}
+
+#themeButton, #logoutUser,h1 {
+    color: var(--header-btn);
+}
+
+.dark_theme {
+  --body-bg: #31313d;
+  --color: white;
+  --loader: gold;
+  --shadow: rgba(255, 255, 255, 0.8);
+  --header-cl: white;
+  --header-btn: #31313d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: JetBrains Mono;
+  user-select: none;
+}
+
+header {
+  background-color: var(--header-cl);
+  padding: 15px;
+  border: 1px solid black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.navBtn:hover {
+  cursor: pointer;
+}
+
+#formSection {
+  margin: 10px 30%;
+  display: flex;
+  position: relative;
+  z-index: 4;
+}
+
+#div {
+  margin: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+#formDiv {
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+input {
+  font-size: 18px;
+  margin: 5px;
+}
+
+#addData {
+  border: none;
+  background: transparent;
+}
+
+#addData:hover {
+  cursor: pointer;
+}
+
+#updateData {
+  border: none;
+  background: transparent;
+}
+
+#updateData:hover {
+  cursor: pointer;
+}
+
+textarea {
+  height: 60px;
+  width: 260px;
+  font-size: 18px;
+}
+
+#main {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+  width: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 4;
+  /* animation: fade 5s linear infinite; */
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#loader {
+  height: 50px;
+  width: 50px;
+  border-radius: 70%;
+  border-top: 2px solid var(--loader);
+  border-right: 2px solid var(--loader);
+  border-bottom: 2px solid var(--loader);
+  border-left: 1px solid var(--body-bg);
+  animation: rotate 1.2s linear infinite;
+  scale: 1.2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#loaderMain {
+  height: 50px;
+  width: 50px;
+  border-radius: 70%;
+  border-top: 2px solid var(--loader);
+  border-right: 2px solid var(--loader);
+  border-bottom: 2px solid var(--loader);
+  border-left: 1px solid var(--body-bg);
+  animation: rotate 1.2s linear infinite;
+  scale: 1.2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.inner {
+  height: 200px;
+  width: 300px;
+  padding: 15px;
+  border-radius: 16px;
+  margin: 20px 35px;
+  box-shadow: 5px 5px 1px var(--shadow);
+  transition: 0.3s linear;
+  border: 1px solid black;
+}
+.inner:hover {
+  box-shadow: 2px 2px 20px var(--shadow);
+  transform: translateY(-10px);
+  animation: glow 2s linear infinite;
+}
+@keyframes glow {
+    0%{
+        box-shadow: 2px 2px 20px var(--shadow);
+    }
+    50% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 2px 2px 20px var(--shadow);;
+    }
+}
+#p {
+  background-color: white;
+  height: 150px;
+  width: 295px;
+  border-radius: 5px;
+  margin: 2px;
+  border: 1px solid black;
+  position: relative;
+}
+
+#update {
+  background: transparent;
+  border: none;
+}
+
+#delete {
+  background: transparent;
+  border: none;
+}
+
+#update:hover {
+  cursor: pointer;
+}
+
+#delete:hover {
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.h {
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+  scrollbar-width: none;
+  height: 25px;
+}
+
+#searchBar {
+  display: flex;
+  justify-content: right;
+  position: relative;
+  z-index: 4;
+  padding-right: 20px;
+}
+
+/* ---- reset ---- */
+canvas {
+  display: block;
+  /* vertical-align: bottom; */
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-bg);
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  /* -webkit-user-select: none; */
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+#scroll {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+body {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+@media (max-width: 840px) {
+    #formSection {
+        margin: 10% 10%;
+    }
+}
+@media (max-width: 645px) {
+    #formSection {
+        margin: 5% 20px;
+        display: block;
+    }
+    #div {
+        margin: 0;
+    }
+    h2 {
+        font-size: 25px;
+        margin-left: 30px;
+    }
+    #main {
+        margin: 10px;
+        padding: 10px;
+    }
+    .inner {
+        margin: 10px;
+    }
+    #loader,#loaderMain {
+        top: 50%;
+        left: 45%;
+    }
+}
