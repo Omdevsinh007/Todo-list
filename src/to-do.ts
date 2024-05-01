@@ -7,7 +7,6 @@ const addDataForm = document.getElementById("addDataForm") as HTMLFormElement;
 const updateDataForm = document.getElementById("updateDataForm") as HTMLFormElement;
 const themebutton = document.getElementById("themeButton") as HTMLButtonElement;
 const userName = document.getElementById("userName") as HTMLHeadingElement;
-const logoutUser = document.getElementById("logoutUser") as HTMLButtonElement;
 const userTasks: UserTask[] = JSON.parse(localStorage.getItem("UserTask") || "[]");
 const userN = '';
 const uName = '';
@@ -22,12 +21,6 @@ const search = document.getElementById('search') as HTMLInputElement;
 
 userName.textContent = `Welcome ${uName}!`;
 updateDataForm.style.display = "none";
-
-//Logout function
-logoutUser.addEventListener("click", (): void => {
-  localStorage.removeItem("LoginUser");
-  location.href = "../html/login.html";
-});
 
 //Create a interface for UserTasks
 interface UserTask {

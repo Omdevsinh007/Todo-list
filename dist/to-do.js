@@ -8,7 +8,6 @@ const addDataForm = document.getElementById("addDataForm");
 const updateDataForm = document.getElementById("updateDataForm");
 const themebutton = document.getElementById("themeButton");
 const userName = document.getElementById("userName");
-const logoutUser = document.getElementById("logoutUser");
 const userTasks = JSON.parse(localStorage.getItem("UserTask") || "[]");
 const userN = '';
 const uName = '';
@@ -22,11 +21,6 @@ const body = document.getElementById("body");
 const search = document.getElementById('search');
 userName.textContent = `Welcome ${uName}!`;
 updateDataForm.style.display = "none";
-//Logout function
-logoutUser.addEventListener("click", () => {
-    localStorage.removeItem("LoginUser");
-    location.href = "../html/login.html";
-});
 //Creating random color
 function random() {
     let someColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.4)`;
